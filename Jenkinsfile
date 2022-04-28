@@ -7,7 +7,7 @@ node {
          stage('Clone Repo') {
             // for display purposes
             // Get some code from a GitHub repository
-            git url: 'https://github.com/tamasjit/SpringJenkinDocker.git',
+            git url: 'https://github.com/Sinchanapd/SpringBootDocker.git',
                 credentialsId: 'springdeploy-user',
                 branch: 'main'
          }
@@ -28,9 +28,9 @@ node {
          environment {
                 DOCKER_HUB_LOGIN = credentials('docker-hub-credentials')
             }
-            sh "docker tag springboot-deploy:${env.BUILD_NUMBER} tamasjit/springboot-deploy"
-            sh "docker login --username=tamasjit --password=123456789"
-            sh "docker push tamasjit/springboot-deploy"
+            sh "docker tag springboot-deploy:${env.BUILD_NUMBER} sinchana123/springboot-deploy"
+            sh "docker login --username=sinchana123 --password=Sinchana@123"
+            sh "docker push sinchana123/springboot-deploy"
         }
     }
     
