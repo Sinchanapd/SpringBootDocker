@@ -4,9 +4,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController 
 {
-@RequestMapping("/")
+@RequestMapping("/testme")
 public String hello() 
 {
-return "Welcome to Tamasjit aws spring Docker docker project made with ❤️+1";
+return "Welcome";
 }
 }
